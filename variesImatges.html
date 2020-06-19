@@ -36,7 +36,7 @@
     <!-- we use cors proxy to avoid cross-origin problems -->
     <a-nft
       type="nft"
-      url="https://pintanescu.github.io/19827F05/19827F05-image/19827F05_petita"
+      url="https://pintanescu.github.io/multimedia/nft/19827F05_petita"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
@@ -44,12 +44,38 @@
       emitevents="false"
     >
       <a-entity
-        gltf-model="https://pintanescu.github.io/19827F05/19827F05-gltf/19827F05_base.gltf"
+        gltf-model="https://pintanescu.github.io/multimedia/gltf/19827F05_base.gltf"
         scale="7 7 7"
         position="0 -30 0"
         rotation="-175 90 -100"
       >
       </a-entity>
+    </a-nft>
+    <a-entity camera></a-entity>
+  </a-scene>
+  <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+    <!-- we use cors proxy to avoid cross-origin problems -->
+    <a-nft
+      type="nft"
+      url="https://pintanescu.github.io/multimedia/nft/16471f25"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+      emitevents="false"
+    >
+    <a-entity
+      gltf-model="https://pintanescu.github.io/multimedia/gltf/19827F05_base.gltf"
+      scale="7 7 7"
+      position="0 -30 0"
+      rotation="-175 90 -100"
+    >
+    </a-entity>
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
