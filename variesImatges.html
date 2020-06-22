@@ -48,12 +48,16 @@
         scale="7 7 7"
         position="0 -30 0"
         rotation="-175 90 -100"
+        id="19827F05_3D"
+        visible="false"
       >
     </a-entity>
       <a-entity
         gltf-model="https://pintanescu.github.io/multimedia/gltf/info.gltf"
         scale="7 7 7"
         position="55 0 0"
+        event-set__down="_event: mousedown; _target: #19827F05_3D; visible: true"
+        event-set__up="_event: mouseup; _target: #19827F05_3D; visible: false"
       >
       </a-entity>
     </a-nft>
