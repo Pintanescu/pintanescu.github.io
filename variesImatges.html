@@ -5,7 +5,7 @@
 <script>
 AFRAME.registerComponent('do-something', {
   init: function () {
-    var entityEl = document.querySelector('#botoinfo19827F05');
+    var entityEl = this.el.querySelector('#botoinfo19827F05');
 
     entityEl.addEventListener('click', function (event) {
       alert("Patata!");
@@ -59,19 +59,19 @@ AFRAME.registerComponent('do-something', {
       emitevents="true"
     >
     <a-entity
-      gltf-model="https://pintanescu.github.io/multimedia/gltf/info.gltf"
-      scale="7 7 7"
-      position="55 0 0"
-      id="botoinfo19827F05"
-    >
-    </a-entity>
-    <a-entity
       gltf-model="https://pintanescu.github.io/multimedia/gltf/19827F05_base.gltf"
       scale="7 7 7"
       position="0 -30 0"
       rotation="-175 90 -100"
       visible="false"
       id="19827F05_3D"
+    >
+    </a-entity>
+    <a-entity
+      gltf-model="https://pintanescu.github.io/multimedia/gltf/info.gltf"
+      scale="7 7 7"
+      position="55 0 0"
+      id="botoinfo19827F05"
     >
     </a-entity>
     </a-nft>
