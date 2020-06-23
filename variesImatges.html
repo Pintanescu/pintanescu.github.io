@@ -15,8 +15,9 @@ AFRAME.registerComponent('do-something', {
       });
 
       this.el.addEventListener("click", function(e) {
-        console.log(e.target)
-        e.target.setAttribute('scale', {x: 20, y: 20, z: 20});
+        console.log(e.target);
+        window.location="index.html";
+        //e.target.setAttribute('scale', {x: 20, y: 20, z: 20});
       });
   }
 });
