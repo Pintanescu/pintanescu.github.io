@@ -3,7 +3,7 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
 <script>
-document.addEventListener('load',
+<!-- document.addEventListener('load',
   function() {
       let allow_clicks = false;
       document.querySelector("#escena").addEventListener('markerFound', (evt) => {
@@ -19,7 +19,16 @@ document.addEventListener('load',
         window.location="index.html";
         //e.target.setAttribute('scale', {x: 20, y: 20, z: 20});
       });
-    }, false);
+    }, false); -->
+
+    AFRAME.registerComponent('x-button-listener', {
+      init: function () {
+        var el = this.el;
+        el.addEventListener('click', function (evt) {
+          alert(el.getAttribute('id'));
+        });
+      }
+    });
 </script>
 
 <style>
