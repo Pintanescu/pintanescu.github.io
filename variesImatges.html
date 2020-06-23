@@ -3,7 +3,7 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
 <script>
-window.addEventListener('load',
+document.addEventListener('load',
   function() {
       let allow_clicks = false;
       document.querySelector("#escena").addEventListener('markerFound', (evt) => {
@@ -49,7 +49,7 @@ window.addEventListener('load',
   </div>
   <a-scene
     id="escena"
-    cursor="fuse: false; rayOrigin:mouse"
+    cursor="fuse: false; rayOrigin: mouse"
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
     embedded
@@ -64,6 +64,7 @@ window.addEventListener('load',
       smoothTolerance=".01"
       smoothThreshold="5"
       emitevents="true"
+      cursor="fuse: false; rayOrigin: mouse"
     >
     <a-entity
       gltf-model="https://pintanescu.github.io/multimedia/gltf/19827F05_base.gltf"
@@ -81,6 +82,7 @@ window.addEventListener('load',
       class="info"
       id="botoinfo19827F05"
       event-listener
+      cursor="fuse: false; rayOrigin: mouse"
     >
     </a-entity>
     </a-nft>
