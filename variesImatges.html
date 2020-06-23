@@ -5,7 +5,16 @@
 <script>
 AFRAME.registerComponent('do-something', {
   init: function () {
-    this.el.addEventListener("click", function(e) {
+      let allow_clicks = false;
+      this.el.addEventListener('markerFound', (evt) => {
+        allow_clicks = true
+      });
+
+      this.el.addEventListener('markerLost', (evt) => {
+        allow_clicks = false
+      });
+
+      this.el.addEventListener("click", function(e) {
         console.log(e.target)
         e.target.setAttribute('scale', {x: 20, y: 20, z: 20});
       });
