@@ -5,7 +5,7 @@
 <script>
 AFRAME.registerComponent('#escena', {
   init: function () {
-      console.log("Iniciat objecte");
+      alert("Iniciat objecte");
       let allow_clicks = false;
       this.el.addEventListener('markerFound', (evt) => {
         allow_clicks = true
