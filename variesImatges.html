@@ -3,24 +3,6 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
 <script>
-<!-- document.addEventListener('load',
-  function() {
-      let allow_clicks = false;
-      document.querySelector("#escena").addEventListener('markerFound', (evt) => {
-        allow_clicks = true
-      });
-
-      document.querySelector("#escena").addEventListener('markerLost', (evt) => {
-        allow_clicks = false
-      });
-
-      document.querySelector("#botoinfo19827F05").addEventListener("click", function(e) {
-        console.log(e.target);
-        window.location="index.html";
-        //e.target.setAttribute('scale', {x: 20, y: 20, z: 20});
-      });
-    }, false); -->
-
     AFRAME.registerComponent('x-button-listener', {
       init: function () {
         var el = this.el;
