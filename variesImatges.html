@@ -5,11 +5,10 @@
 <script>
 AFRAME.registerComponent('do-something', {
   init: function () {
-    var entityEl = this.el.querySelector('#botoinfo19827F05');
-
-    entityEl.addEventListener('click', function (event) {
-      alert("Patata!");
-    });
+    this.el.addEventListener("click", function(e) {
+        console.log(e.target)
+        e.target.setAttribute('scale', {x: 20, y: 20, z: 20});
+      });
   }
 });
 </script>
@@ -73,7 +72,7 @@ AFRAME.registerComponent('do-something', {
       position="55 0 0"
       class="info"
       id="botoinfo19827F05"
-      emitevents="true"
+      event-listener
     >
     </a-entity>
     </a-nft>
