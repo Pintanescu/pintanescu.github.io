@@ -3,7 +3,7 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
 <script>
-AFRAME.registerComponent('do-something', {
+AFRAME.registerComponent('#escena', {
   init: function () {
       let allow_clicks = false;
       this.el.addEventListener('markerFound', (evt) => {
@@ -49,7 +49,7 @@ AFRAME.registerComponent('do-something', {
     <div>Loading, please wait...</div>
   </div>
   <a-scene
-    do-something
+    id="escena"
     cursor="fuse: false; rayOrigin:mouse"
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
