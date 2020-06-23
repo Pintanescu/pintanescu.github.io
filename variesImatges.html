@@ -2,17 +2,6 @@
 <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-<script>
-    AFRAME.registerComponent('x-button-listener', {
-      init: function () {
-        var el = this.el;
-        el.addEventListener('click', function (evt) {
-          alert("patata");
-        });
-      }
-    });
-</script>
-
 <style>
   .arjs-loader {
     height: 100%;
@@ -75,12 +64,8 @@
       position="55 0 0"
       class="clickable"
       id="botoinfo19827F05"
-      event-listener
-      x-button-listener
       cursor="fuse: false; rayOrigin: mouse"
-      raycaster="objects: .clickable"
-      begin="clicked"
-      clickable
+      event-set__1="_event: click; window.location='index.html'"
     >
     </a-entity>
     </a-nft>
