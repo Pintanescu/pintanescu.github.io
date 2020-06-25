@@ -5,7 +5,7 @@
 <script>
 AFRAME.registerComponent('infoPresent', {
   schema: {
-    url: {type: 'string', default: ''},
+    urlInfo: {type: 'string', default: ''},
     fotofixa: {type: 'string', default: ''},
     film: {type: 'string', default: ''}
 },
@@ -13,7 +13,7 @@ AFRAME.registerComponent('infoPresent', {
   init: function () {
     var marcador = this.el;
     marcador.addEventListener('markerFound', () => {
-      Window.location = marcador.data.urlInfo;
+      alert(marcador.data.urlInfo);
     });
   }
 });
