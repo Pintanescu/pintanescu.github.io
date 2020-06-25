@@ -14,7 +14,7 @@ AFRAME.registerComponent('infoPresent', {
     var dataActual = this.data;
     var marcador = this.el;
     marcador.addEventListener('markerFound', () => {
-      alert(dataActual.infoPresent.urlInfo);
+      Console.log(dataActual.urlInfo);
     });
   }
 });
@@ -62,7 +62,7 @@ AFRAME.registerComponent('infoPresent', {
       cursor="fuse: false; rayOrigin: mouse"
       raycaster="objects: .clickable"
       id="19827F05_nft"
-      infoPresent="urlInfo: 19827F05_info.html;"
+      infoPresent="urlInfo: 19827F05_info.html;f otofixa: Garriga; film: 13684"
     >
         <a-entity
           gltf-model="https://pintanescu.github.io/multimedia/gltf/19827F05_base.gltf"
