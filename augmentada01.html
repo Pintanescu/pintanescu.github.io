@@ -18,7 +18,8 @@ AFRAME.registerComponent('url_info', {
         // or you can just open links, trigger actions...
         //alert(this.id);
         if (this.url_info != undefined){
-          Window.location = this.url_info.data;
+          alert (this.url_info);
+          //Window.location = this.url_info.data;
         }
       });
   };
