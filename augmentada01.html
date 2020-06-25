@@ -11,8 +11,9 @@ AFRAME.registerComponent('info_present', {
 },
 
   init: function () {
-    this.el.sceneEl.addEventListener('markerFound', (desti) => {
-      alert (desti.getAttribute('info_present').url_info);
+    marcador = this.el;
+    marcador.addEventListener('markerFound', () => {
+      alert (marcador.info_present.url_info);
     });
   }
 });
