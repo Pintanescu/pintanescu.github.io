@@ -11,9 +11,9 @@ AFRAME.registerComponent('info_present', {
 },
 
   init: function () {
-    this.el.sceneEl.addEventListener('markerFound', () => {
+    this.el.sceneEl.addEventListener('markerFound', (desti) => {
       // redirect to custom URL
-      alert (this.el.getAttribute('info_present').url_info);
+      alert (desti.getAttribute('info_present').url_info);
     },true);
   }
 });
