@@ -6,11 +6,11 @@
 window.onload = function () {
     document
       .querySelector("a-nft")
-      .addEventListener("click", function () {
+      .addEventListener("markerFound", function () {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert("Hi there!");
+        alert(ev);
       });
   };
 </script>
@@ -56,6 +56,7 @@ window.onload = function () {
       smoothThreshold="5"
       cursor="fuse: false; rayOrigin: mouse"
       raycaster="objects: .clickable"
+      id="unnft"
     >
         <a-entity
           gltf-model="https://pintanescu.github.io/multimedia/gltf/19827F05_base.gltf"
