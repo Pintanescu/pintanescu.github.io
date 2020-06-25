@@ -11,8 +11,7 @@ AFRAME.registerComponent('info_present', {
 },
 
   init: function () {
-    var aquestElement = this.el;
-    aquestElement.sceneEl.addEventListener('markerFound', () => {
+    this.el.sceneEl.addEventListener('markerFound', () => {
       // redirect to custom URL
       alert ("cogombre");
     });
