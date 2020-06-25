@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+<style>
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+</style>
+<body style="margin : 0px; overflow: hidden;">
+  <!-- minimal loader shown until image descriptors are loaded -->
+  <div class="arjs-loader">
+    <div>Loading, please wait...</div>
+  </div>
+  <a-scene
+    id="escena"
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+
+    <a-nft
+      type="nft"
+      url="https://pintanescu.github.io/multimedia/nft/19827F05_petita"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+      cursor="fuse: false; rayOrigin: mouse"
+      raycaster="objects: .clickable"
+    >
+    <a-entity
+      gltf-model="https://pintanescu.github.io/multimedia/gltf/19827F05_base.gltf"
+      scale="7 7 7"
+      position="0 -30 0"
+      rotation="-175 90 -100"
+      visible="false"
+      x-button-listener
+      id="19827F05_3D"
+      cursor="fuse: false; rayOrigin: mouse"
+      clickable
+    >
+    </a-entity>
+    <a-entity
+      gltf-model="https://pintanescu.github.io/multimedia/gltf/info.gltf"
+      scale="7 7 7"
+      position="55 0 0"
+      class="clickable"
+      id="botoinfo19827F05"
+      cursor="fuse: false; rayOrigin: mouse"
+      event-set__click="_event: click; _target: #19827F05_3D; visible: true"
+    >
+    </a-entity>
+    </a-nft>
+
+    <a-nft
+      type="nft"
+      url="https://pintanescu.github.io/multimedia/nft/14965f81"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+      emitevents="true"
+    >
+    <a-text
+      value="Aquesta foto fixa est&agrave;<br>inspirada en quadres<br>de Friedrich."
+      color="black"
+      scale="200 200 200"
+      rotation="0 0 0"
+      side="double"
+    >
+    </a-text>
+    </a-nft>
+    <a-camera>
+    </a-camera>
+  </a-scene>
+</body>
+</html>
