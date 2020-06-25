@@ -11,9 +11,10 @@ AFRAME.registerComponent('info_present', {
 },
 
   init: function () {
-    marcador = this.el;
+    var marcador = this.el;
     marcador.addEventListener('markerFound', () => {
-      alert (marcador.info_present.url_info);
+      alert ('esberginia');
+      //alert (marcador.info_present.url_info);
     });
   }
 });
