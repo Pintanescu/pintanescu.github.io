@@ -11,9 +11,10 @@ AFRAME.registerComponent('info_present', {
 },
 
   init: function () {
-    this.el.sceneEl.addEventListener('markerFound', () => {
+    aquestElement = this.el;
+    aquestElement.sceneEl.addEventListener('markerFound', () => {
       // redirect to custom URL
-      alert ("patata");
+      alert ("cogombre");
     });
   }
 });
