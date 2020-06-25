@@ -13,7 +13,7 @@ AFRAME.registerComponent('infoPresent', {
   init: function () {
     var marcador = this.el;
     marcador.addEventListener('markerFound', () => {
-      alert (marcador.cursor);
+      alert (marcador.data.urlInfo);
     });
   }
 });
