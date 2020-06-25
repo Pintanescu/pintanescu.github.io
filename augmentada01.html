@@ -18,7 +18,7 @@ AFRAME.registerComponent('url_info', {
         // or you can just open links, trigger actions...
         //alert(this.id);
         if (this.url_info != undefined){
-          window.location = this.url_info;
+          Window.location = this.url_info.data;
         }
       });
   };
@@ -101,8 +101,8 @@ AFRAME.registerComponent('url_info', {
         >
     </a-text>
     </a-nft>
-    <a-camera>
-    </a-camera>
+
+    <a-camera></a-camera>
   </a-scene>
 </body>
 </html>
