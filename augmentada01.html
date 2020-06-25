@@ -14,10 +14,10 @@ AFRAME.registerComponent('infopresent', {
     var dataActual = this.data;
     var marcador = this.el;
 
-    Console.log("dataActual");
+    console.log("dataActual");
 
     marcador.addEventListener('markerFound', () => {
-      Console.log(dataActual.urlInfo);
+      console.log(dataActual.urlInfo);
     });
   }
 });
@@ -65,7 +65,7 @@ AFRAME.registerComponent('infopresent', {
       cursor="fuse: false; rayOrigin: mouse"
       raycaster="objects: .clickable"
       id="19827F05_nft"
-      infopresent="urlInfo: 19827F05_info.html;f otofixa: Garriga; film: 13684"
+      infopresent="urlInfo: 19827F05_info.html;fotofixa: Garriga; film: 13684"
     >
         <a-entity
           gltf-model="https://pintanescu.github.io/multimedia/gltf/19827F05_base.gltf"
