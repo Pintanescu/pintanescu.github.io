@@ -10,11 +10,9 @@ AFRAME.registerComponent('infopresent', {
     film: {type: 'string', default: ''}
 },
 
-  init: function () {
+  update: function () {
     var dataActual = this.data;
     var marcador = this.el;
-
-    console.log("dataActual");
 
     marcador.addEventListener('markerFound', () => {
       console.log(dataActual.urlInfo);
