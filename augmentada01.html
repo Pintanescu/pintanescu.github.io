@@ -3,7 +3,7 @@
 <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 <script>
-AFRAME.registerComponent('infoPresent', {
+AFRAME.registerComponent('infopresent', {
   schema: {
     urlInfo: {type: 'string', default: ''},
     fotofixa: {type: 'string', default: ''},
@@ -15,7 +15,7 @@ AFRAME.registerComponent('infoPresent', {
     var marcador = this.el;
 
     Console.log("dataActual");
-    
+
     marcador.addEventListener('markerFound', () => {
       Console.log(dataActual.urlInfo);
     });
@@ -65,7 +65,7 @@ AFRAME.registerComponent('infoPresent', {
       cursor="fuse: false; rayOrigin: mouse"
       raycaster="objects: .clickable"
       id="19827F05_nft"
-      infoPresent="urlInfo: 19827F05_info.html;f otofixa: Garriga; film: 13684"
+      infopresent="urlInfo: 19827F05_info.html;f otofixa: Garriga; film: 13684"
     >
         <a-entity
           gltf-model="https://pintanescu.github.io/multimedia/gltf/19827F05_base.gltf"
@@ -89,7 +89,7 @@ AFRAME.registerComponent('infoPresent', {
       smoothThreshold="5"
       emitevents="true"
       id="14965f81_nft"
-      infoPresent="urlInfo: 14965f81_info.html;"
+      infopresent="urlInfo: 14965f81_info.html;"
     >
         <a-text
           value="Aquesta foto fixa est&agrave;<br>inspirada en quadres<br>de Friedrich."
