@@ -14,7 +14,7 @@ AFRAME.registerComponent('infoPresent', {
     var dataActual = this.data;
     var marcador = this.el;
 
-    Console.log(dataActual);
+    Console.log("dataActual");
     
     marcador.addEventListener('markerFound', () => {
       Console.log(dataActual.urlInfo);
