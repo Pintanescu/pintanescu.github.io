@@ -14,7 +14,7 @@ AFRAME.registerComponent('info_present', {
     var aquestElement = this.el;
     this.el.sceneEl.addEventListener('markerFound', () => {
       // redirect to custom URL
-      alert (this.el.getAttribute('url'));
+      alert (this.el.sceneEl.getAttribute('url'));
     });
   }
 });
@@ -62,7 +62,7 @@ AFRAME.registerComponent('info_present', {
       cursor="fuse: false; rayOrigin: mouse"
       raycaster="objects: .clickable"
       id="19827F05_nft"
-      info_present="url: 19827F05_info.html"
+      info_present="url_info: 19827F05_info.html"
     >
         <a-entity
           gltf-model="https://pintanescu.github.io/multimedia/gltf/19827F05_base.gltf"
@@ -86,7 +86,7 @@ AFRAME.registerComponent('info_present', {
       smoothThreshold="5"
       emitevents="true"
       id="14965f81_nft"
-      info_present="url: 14965f81_info.html"
+      info_present="url_info: 14965f81_info.html"
     >
         <a-text
           value="Aquesta foto fixa est&agrave;<br>inspirada en quadres<br>de Friedrich."
