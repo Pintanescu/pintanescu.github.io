@@ -4,7 +4,13 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 <script>
 window.onload = function () {
-AFRAME.registerComponent('url_info', {
+AFRAME.registerComponent('info_present', {
+  schema: {
+    url: {type: 'string', default: ''}
+    fotofixa: {type: 'string', default: ''}
+    film: {type: 'string', default: ''}
+  },
+
   init: function () {
     console.log('url_info registered');
   }
@@ -16,9 +22,9 @@ AFRAME.registerComponent('url_info', {
         // here you can change also a-scene or a-entity properties, like
         // changing your 3D model source, size, position and so on
         // or you can just open links, trigger actions...
-        alert(this.url_info);
-        if (this.url_info != undefined){
-          alert (this.url_info);
+
+        if (this.info_present){
+          alert (this.info_present.data);
           //Window.location = this.url_info.data;
         }
       });
@@ -91,7 +97,7 @@ AFRAME.registerComponent('url_info', {
       smoothThreshold="5"
       emitevents="true"
       id="14965f81_nft"
-      url_info="14965f81_info.html"
+      info_present="url: 14965f81_info.html"
     >
         <a-text
           value="Aquesta foto fixa est&agrave;<br>inspirada en quadres<br>de Friedrich."
