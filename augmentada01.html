@@ -50,7 +50,7 @@ AFRAME.registerComponent('infopresent', {
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
     embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: true;"
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
 
     <a-nft
@@ -99,7 +99,7 @@ AFRAME.registerComponent('infopresent', {
     </a-text>
     </a-nft>
 
-    <a-image id="button" url="/multimedia/imatges/info.png" data-clickable visible="true" height="0.5" width="0.5" onclick="dosomething()"></a-image>
+    <a-image id="button" url="multimedia/imatges/info.png" data-clickable visible="true" height="0.5" width="0.5" onclick="dosomething()"></a-image>
 
     <a-camera></a-camera>
   </a-scene>
