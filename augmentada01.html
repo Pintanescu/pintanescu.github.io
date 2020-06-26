@@ -52,6 +52,9 @@ AFRAME.registerComponent('infopresent', {
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
+  <a-assets>
+    <img id="infoimg" src="https://pintanescu.github.io/multimedia/imatges/info.png">
+  </a-assets>
 
     <a-nft
       type="nft"
@@ -99,7 +102,7 @@ AFRAME.registerComponent('infopresent', {
     </a-text>
     </a-nft>
 
-    <a-image id="button" url="https://pintanescu.github.io/multimedia/imatges/info.png" data-clickable visible="true" height="3" width="3" onclick="dosomething()"></a-image>
+    <a-plane src="#infoimg" height="100" width="100" rotation="0 0 0"></a-plane>
 
     <a-camera></a-camera>
   </a-scene>
