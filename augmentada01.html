@@ -3,7 +3,7 @@
 <script src="https://pintanescu.github.io/scripts/aframe.min.js"></script>
 <script src="https://pintanescu.github.io/scripts/aframe-ar-nft.js"></script>
 <script>
-var laurlinfo;
+var laurlinfo = "";
 
 AFRAME.registerComponent('infopresent', {
   schema: {
@@ -22,7 +22,7 @@ AFRAME.registerComponent('infopresent', {
         document.getElementById('botoinfo').style.visibility = "visible";
         console.log(laurlinfo);
       } else {
-        console.log(dataActual.urlinfo + " no trobada");
+        console.log("laurlinfo no trobada");
       }
     });
 
@@ -37,7 +37,7 @@ AFRAME.registerComponent('infopresent', {
 });
 
 function vesinfo (){
-  console.log = "Heu fet click!";
+  console.log ("Heu fet click!");
   Window.location = laurlinfo;
 }
 </script>
