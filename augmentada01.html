@@ -7,7 +7,7 @@ var laurlinfo;
 
 AFRAME.registerComponent('infopresent', {
   schema: {
-    urlInfo: {type: 'string', default: ''},
+    urlinfo: {type: 'string', default: ''},
     fotofixa: {type: 'string', default: ''},
     film: {type: 'string', default: ''}
 },
@@ -18,11 +18,11 @@ AFRAME.registerComponent('infopresent', {
 
     marcador.addEventListener('markerFound', () => {
       if (dataActual.urlinfo){
-        laurlinfo = dataActual.urlInfo;
+        laurlinfo = dataActual.urlinfo;
         document.getElementById('botoinfo').style.visibility = "visible";
         console.log(laurlinfo);
       } else {
-        console.log(dataActual.urlinfo)
+        console.log(dataActual.urlinfo + " no trobada");
       }
     });
 
@@ -101,7 +101,7 @@ AFRAME.registerComponent('infopresent', {
       cursor="fuse: false; rayOrigin: mouse"
       raycaster="objects: .clickable"
       id="19827F05_nft"
-      infopresent="urlInfo: 19827F05_info.html;fotofixa: Garriga; film: 13684"
+      infopresent="urlinfo: 19827F05_info.html;fotofixa: Garriga; film: 13684"
     >
         <a-entity
           gltf-model="https://pintanescu.github.io/multimedia/gltf/19827F05_base.gltf"
@@ -122,7 +122,7 @@ AFRAME.registerComponent('infopresent', {
       smoothThreshold="5"
       emitevents="true"
       id="14965f81_nft"
-      infopresent="urlInfo: 14965f81_info.html;"
+      infopresent="urlinfo: 14965f81_info.html;"
     >
     </a-nft>
     <a-camera></a-camera>
