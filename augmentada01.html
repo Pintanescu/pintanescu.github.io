@@ -41,7 +41,7 @@ AFRAME.registerComponent('infopresent', {
   }
 </style>
 <body style="margin : 0px; overflow: hidden;">
-  <div id="botoinfo"><img src="multimedia/imatges/info.png" width="5%" height="5%"/></div>
+  <div id="botoinfo"><img src="https://pintanescu.github.io/multimedia/imatges/info.png" width="5%" height="5%"/></div>
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
@@ -53,10 +53,6 @@ AFRAME.registerComponent('infopresent', {
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
-  <a-assets>
-    <img id="infoimg" src="https://pintanescu.github.io/multimedia/imatges/info.png">
-  </a-assets>
-
     <a-nft
       type="nft"
       url="https://pintanescu.github.io/multimedia/nft/19827F05_petita"
@@ -94,9 +90,6 @@ AFRAME.registerComponent('infopresent', {
       infopresent="urlInfo: 14965f81_info.html;"
     >
     </a-nft>
-
-    <a-box src="#infoimg" height="100" width="100" color="red" position="0 0 0"></a-box>
-
     <a-camera></a-camera>
   </a-scene>
 </body>
