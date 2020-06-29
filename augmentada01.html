@@ -19,16 +19,16 @@ AFRAME.registerComponent('infopresent', {
     marcador.addEventListener('markerFound', () => {
       if (dataActual.urlinfo){
         laurlinfo = dataActual.urlInfo;
-        document.getElementById('botoinfo').visible = true;
-        console.log(dataActual.urlInfo);
+        document.getElementById('botoinfo').style.visibility = "visible";
+        console.log(laurlinfo);
       }
     });
 
     marcador.addEventListener('markerLost', () => {
       if (dataActual.urlinfo){
         laurlinfo = "index.html";
-        document.getElementById('botoinfo').visible = false;
-        console.log(dataActual.urlInfo);
+        document.getElementById('botoinfo').style.visibility = "hidden";
+        console.log(laurlinfo);
       }
     });
   }
@@ -76,7 +76,7 @@ AFRAME.registerComponent('infopresent', {
 <body style="margin : 0px; overflow: hidden;">
   <div class="buttons">
     <img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="botoimg"/>
-    <img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo" class="botoimg" style="visible: hidden;"/>
+    <img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo" class="botoimg" style="visibility: hidden;"/>
   </div>
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
