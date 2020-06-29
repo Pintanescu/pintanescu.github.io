@@ -3,6 +3,8 @@
 <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 <script>
+var laurlinfo;
+
 AFRAME.registerComponent('infopresent', {
   schema: {
     urlInfo: {type: 'string', default: ''},
@@ -15,7 +17,19 @@ AFRAME.registerComponent('infopresent', {
     var marcador = this.el;
 
     marcador.addEventListener('markerFound', () => {
-      console.log(dataActual.urlInfo);
+      if (dataActual.urlinfo){
+        laurlinfo = dataActual.urlInfo;
+        document.getElementById('botoinfo').visible = true;
+        console.log(dataActual.urlInfo);
+      }
+    });
+
+    marcador.addEventListener('markerLost', () => {
+      if (dataActual.urlinfo){
+        laurlinfo = "index.html";
+        document.getElementById('botoinfo').visible = false;
+        console.log(dataActual.urlInfo);
+      }
     });
   }
 });
@@ -61,8 +75,8 @@ AFRAME.registerComponent('infopresent', {
 </style>
 <body style="margin : 0px; overflow: hidden;">
   <div class="buttons">
-    <img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoenrere" class="botoimg"/>
-    <img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo" class="botoimg"/>
+    <img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="botoimg"/>
+    <img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo" class="botoimg" visible="false"/>
   </div>
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
@@ -92,11 +106,8 @@ AFRAME.registerComponent('infopresent', {
           scale="7 7 7"
           position="0 -30 0"
           rotation="-175 90 -100"
-          x-button-listener
           id="19827F05_3D"
-          cursor="fuse: false; rayOrigin: mouse"
-          clickable
-        >
+          >
         </a-entity>
     </a-nft>
 
