@@ -52,7 +52,7 @@ AFRAME.registerComponent('infopresent', {
     z-index: 10;
   }
 
-  #botoinfo {
+  .botoimg {
     padding: 0.45em;
     border: none;
     width: 4.5em;
@@ -60,7 +60,10 @@ AFRAME.registerComponent('infopresent', {
   }
 </style>
 <body style="margin : 0px; overflow: hidden;">
-  <div class="buttons"><img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo"/></div>
+  <div class="buttons">
+    <img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoenrere" class="botoimg"/>
+    <img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo" class="botoimg"/>
+  </div>
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
