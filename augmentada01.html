@@ -4,11 +4,16 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 <script>
 var laurlinfo = "";
-
-function vesinfo(){
-  console.log ("Heu fet click!");
-  //Window.location = laurlinfo;
-}
+window.onload = function () {
+   document
+     .querySelector(".botoimg")
+     .addEventListener("click", function () {
+       // here you can change also a-scene or a-entity properties, like
+       // changing your 3D model source, size, position and so on
+       // or you can just open links, trigger actions...
+       alert("Hi there!");
+     });
+ };
 
 AFRAME.registerComponent('infopresent', {
   schema: {
@@ -78,16 +83,15 @@ AFRAME.registerComponent('infopresent', {
     border: none;
     width: 4.5em;
     height: 4.5em;
+    border-radius: 50%;
+    color: black;
+    background-color: white
   }
 </style>
 <body style="margin : 0px; overflow: hidden;">
   <div class="buttons">
-    <a href="index.html"><img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="botoimg"/></a>
-    <div id="botoinfo" style="visibility: hidden;" class="botoimg">
-      <button type="button" onclick="vesinfo()" style="border-radius: 50%">
-        <img src="https://pintanescu.github.io/multimedia/imatges/info.png"/>
-      </button>
-    </div>
+    <a href="index.html"><img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere"/></a>
+    <button type="button" id="botoinfo" style="visibility: hidden;" class="botoimg">i</button>
   </div>
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
