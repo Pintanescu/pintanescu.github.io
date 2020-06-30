@@ -83,7 +83,11 @@ function vesinfo (){
 <body style="margin : 0px; overflow: hidden;">
   <div class="buttons">
     <a href="index.html"><img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="botoimg"/></a>
-    <div id="botoinfo" onclick="vesinfo()" style="visibility: hidden;" class="botoimg"><img src="https://pintanescu.github.io/multimedia/imatges/info.png"/></div>
+    <div id="botoinfo" style="visibility: hidden;" class="botoimg">
+      <button type="button" onclick="vesinfo()">
+        <img src="https://pintanescu.github.io/multimedia/imatges/info.png"/>
+      </button>
+    </div>
   </div>
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
@@ -131,8 +135,9 @@ function vesinfo (){
       id="14965f81_nft"
       infopresent="urlinfo: html/14965f81_info.html;"
     >
-
-    <a-plane color="red" height="100" width="100"></a-plane>
+    <a-entity>
+      <a-plane color="red" position="0 0 0" height="100" width="100"></a-plane>
+    </a-entity>
     </a-nft>
     <a-camera></a-camera>
   </a-scene>
