@@ -85,12 +85,20 @@ AFRAME.registerComponent('infopresent', {
     height: 4.5em;
     border-radius: 50%;
     color: black;
-    background-color: white
+    background-color: white;
+    font-size: 3em;
+  }
+
+  .boto{
+    padding: 0.45em;
+    border: none;
+    width: 4.5em;
+    height: 4.5em;
   }
 </style>
 <body style="margin : 0px; overflow: hidden;">
   <div class="buttons">
-    <a href="index.html"><img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere"/></a>
+    <a href="index.html"><img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="boto"/></a>
     <button type="button" id="botoinfo" style="visibility: hidden;" class="botoimg">i</button>
   </div>
   <!-- minimal loader shown until image descriptors are loaded -->
