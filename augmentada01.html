@@ -99,7 +99,9 @@ AFRAME.registerComponent('infopresent', {
 <body style="margin : 0px; overflow: hidden;">
   <div class="buttons">
     <a href="index.html"><img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="boto"/></a>
-    <button type="button" id="botoinfo" style="visibility: hidden;" class="botoimg">i</button>
+    <button type="button" id="botoinfo" style="visibility: hidden;" class="botoimg">
+      <img src="https://pintanescu.github.io/multimedia/imatges/info.png"/>
+    </button>
   </div>
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
@@ -151,7 +153,7 @@ AFRAME.registerComponent('infopresent', {
           geometry="primitive: box; width: 400; height: 300"
           material="shader: flat; src: #linies"
           position="0 0 0"
-          rotation="90 0 0"
+          rotation="0 0 -90"
           scale="1 1 1"
           id="14965f81_box"
           >
