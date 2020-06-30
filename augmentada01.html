@@ -5,6 +5,11 @@
 <script>
 var laurlinfo = "";
 
+function vesinfo(){
+  console.log ("Heu fet click!");
+  //Window.location = laurlinfo;
+}
+
 AFRAME.registerComponent('infopresent', {
   schema: {
     urlinfo: {type: 'string', default: ''},
@@ -35,11 +40,6 @@ AFRAME.registerComponent('infopresent', {
     });
   }
 });
-
-function vesinfo (){
-  console.log ("Heu fet click!");
-  Window.location = laurlinfo;
-}
 </script>
 <style>
   .arjs-loader {
@@ -140,6 +140,7 @@ function vesinfo (){
           material="shader: flat; color: #FFC65D"
           position="0 0 0"
           rotation="35 35 35"
+          scale="1 1 1"
           id="14965f81_plane"
           >
         </a-entity>
