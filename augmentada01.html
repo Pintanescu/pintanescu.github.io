@@ -5,15 +5,17 @@
 <script>
 var laurlinfo = "";
 window.onload = function () {
-   document
-     .querySelectorAll(".botoimg")
-     .addEventListener("click", function () {
-        if (this.id == 'botoenrere')
-          window.location.href = 'index.html';
-        } else if (this.id == 'botoinfo') {
-          window.location.href = laurlinfo;
-        }
-     });
+  const cbox = document.querySelectorAll(".botoimg");
+
+   for (let i = 0; i < cbox.length; i++) {
+       cbox[i].addEventListener("click", function() {
+         if (this.id == 'botoenrere')
+           window.location.href = 'index.html';
+         } else if (this.id == 'botoinfo') {
+           window.location.href = laurlinfo;
+         }
+       });
+    }
  };
 
 AFRAME.registerComponent('infopresent', {
@@ -156,8 +158,8 @@ AFRAME.registerComponent('infopresent', {
         <a-entity
           geometry="primitive: plane; width: 240; height: 180"
           material="shader: flat; src: #linies; color: white"
-          position="50 200 0"
-          rotation="-175 20 -100"
+          position="0 0 0"
+          rotation="-175 90 -100"
           scale="1 1 1"
           id="14965f81_box"
           >
