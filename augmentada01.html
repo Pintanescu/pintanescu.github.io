@@ -6,14 +6,13 @@
 var laurlinfo = "";
 window.onload = function () {
    document
-     .querySelector(".botoimg")
+     .querySelectorAll(".botoimg")
      .addEventListener("click", function () {
-       // here you can change also a-scene or a-entity properties, like
-       // changing your 3D model source, size, position and so on
-       // or you can just open links, trigger actions...
-       alert (this.id);
-       console.log (el.id);
-       //window.location.href = laurlinfo;
+        if (this.id == 'botoenrere')
+          window.location.href = 'index.html';
+        } else if (this.id == 'botoinfo') {
+          window.location.href = laurlinfo;
+        }
      });
  };
 
@@ -81,9 +80,10 @@ AFRAME.registerComponent('infopresent', {
   }
 
   .buttons span {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
   }
+
   .botoimg {
     padding: 0.45em;
     border: none;
