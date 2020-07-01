@@ -80,6 +80,10 @@ AFRAME.registerComponent('infopresent', {
     z-index: 9998;
   }
 
+  .buttons span {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
   .botoimg {
     padding: 0.45em;
     border: none;
@@ -100,8 +104,8 @@ AFRAME.registerComponent('infopresent', {
 </style>
 <body style="margin : 0px; overflow: hidden;">
   <div class="buttons">
-    <img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="botoimg">
-    <img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo" style="visibility: hidden;" class="botoimg">
+    <span><img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="botoimg"></span>
+    <span><img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo" style="visibility: hidden;" class="botoimg"></span>
   </div>
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
