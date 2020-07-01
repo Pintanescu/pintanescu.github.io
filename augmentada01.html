@@ -11,7 +11,7 @@ window.onload = function () {
        // here you can change also a-scene or a-entity properties, like
        // changing your 3D model source, size, position and so on
        // or you can just open links, trigger actions...
-       console.log (el.id);
+       console.log (this.el.id);
        //window.location.href = laurlinfo;
      });
  };
@@ -99,7 +99,7 @@ AFRAME.registerComponent('infopresent', {
 </style>
 <body style="margin : 0px; overflow: hidden;">
   <div class="buttons">
-    <img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="botoinfo"/>
+    <img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="botoimg"/>
     <img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo" style="visibility: hidden;" class="botoimg"/>
   </div>
   <!-- minimal loader shown until image descriptors are loaded -->
@@ -149,7 +149,7 @@ AFRAME.registerComponent('infopresent', {
       infopresent="urlinfo: html/14965f81_info.html;"
     >
         <a-entity
-          geometry="primitive: plane; width: 4; height: 3"
+          geometry="primitive: plane; width: 40; height: 30"
           material="shader: flat; src: #linies; color: white"
           position="50 100 0"
           rotation="-155 0 -20"
