@@ -7,11 +7,11 @@ var laurlinfo = "";
 window.onload = function () {
    document
      .querySelector(".botoimg")
-     .addEventListener("click", function (el) {
+     .addEventListener("click", function () {
        // here you can change also a-scene or a-entity properties, like
        // changing your 3D model source, size, position and so on
        // or you can just open links, trigger actions...
-       alert (this.el.id);
+       alert (this.id);
        console.log (el.id);
        //window.location.href = laurlinfo;
      });
@@ -150,10 +150,10 @@ AFRAME.registerComponent('infopresent', {
       infopresent="urlinfo: html/14965f81_info.html;"
     >
         <a-entity
-          geometry="primitive: plane; width: 160; height: 120"
+          geometry="primitive: plane; width: 240; height: 180"
           material="shader: flat; src: #linies; color: white"
           position="50 200 0"
-          rotation="-150 20 -90"
+          rotation="-175 20 -100"
           scale="1 1 1"
           id="14965f81_box"
           >
