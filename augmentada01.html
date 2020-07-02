@@ -45,9 +45,9 @@ AFRAME.registerComponent('infopresent', {
       if (dataActual.film){
         laurlfilm = dataActual.film;
         document.getElementById('botofotos').style.visibility = "visible";
-        console.log(laurlinfo);
+        console.log(laurlfilm);
       } else {
-        console.log("laurlinfo no trobada");
+        console.log("laurlfilm no trobada");
       }
     });
 
@@ -55,7 +55,8 @@ AFRAME.registerComponent('infopresent', {
       if (dataActual.urlinfo){
         laurlinfo = "index.html";
         document.getElementById('botoinfo').style.visibility = "hidden";
-        console.log(laurlinfo);
+        document.getElementById('botofotos').style.visibility = "hidden";
+        console.log('Amagats botons');
       }
     });
   }
