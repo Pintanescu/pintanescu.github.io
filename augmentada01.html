@@ -4,6 +4,8 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 <script>
 var laurlinfo = "";
+var laurlfilm = "";
+
 window.onload = function () {
   const cbox = document.querySelectorAll(".botoimg");
 
@@ -13,7 +15,9 @@ window.onload = function () {
            window.location.href = 'index.html';
          } else if (this.id == 'botoinfo') {
            window.location.href = laurlinfo;
-         }
+         } else if (this.id == 'botofotos') {
+           window.location.href = laurlfilm;
+        }
        });
     }
  };
@@ -32,6 +36,14 @@ AFRAME.registerComponent('infopresent', {
     marcador.addEventListener('markerFound', () => {
       if (dataActual.urlinfo){
         laurlinfo = dataActual.urlinfo;
+        document.getElementById('botoinfo').style.visibility = "visible";
+        console.log(laurlinfo);
+      } else {
+        console.log("laurlinfo no trobada");
+      }
+
+      if (dataActual.film){
+        laurlfilm = dataActual.film;
         document.getElementById('botoinfo').style.visibility = "visible";
         console.log(laurlinfo);
       } else {
@@ -108,6 +120,7 @@ AFRAME.registerComponent('infopresent', {
   <div class="buttons">
     <span><img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="botoimg"></span>
     <span><img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo" style="visibility: hidden;" class="botoimg"></span>
+    <span><img src="https://pintanescu.github.io/multimedia/imatges/mesfotos.png" id="botofotos" style="visibility: hidden;" class="botoimg"></span>
   </div>
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
@@ -166,7 +179,7 @@ AFRAME.registerComponent('infopresent', {
       smoothThreshold="5"
       cursor="fuse: false; rayOrigin: mouse"
       id="16471f25_nft"
-      infopresent="urlinfo: 16471f25_info.html;fotofixa: Torres Garriga, Salvador; film: 13684"
+      infopresent="urlinfo: 16471f25_info.html;fotofixa: Torres Garriga, Salvador; film: CSS/index.html"
     >
         <a-entity
           gltf-model="https://pintanescu.github.io/multimedia/gltf/16471f25_base.gltf"
