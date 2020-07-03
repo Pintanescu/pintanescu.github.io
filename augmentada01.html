@@ -5,6 +5,7 @@
 <script>
 var laurlinfo = "";
 var laurlfilm = "";
+var laurlliniescomposicio = "";
 
 window.onload = function () {
   const cbox = document.querySelectorAll(".botoimg");
@@ -26,7 +27,8 @@ AFRAME.registerComponent('infopresent', {
   schema: {
     urlinfo: {type: 'string', default: ''},
     fotofixa: {type: 'string', default: ''},
-    film: {type: 'string', default: ''}
+    film: {type: 'string', default: ''},
+    liniescomposicio: {type: 'string', default: ''}
 },
 
   update: function () {
@@ -49,14 +51,37 @@ AFRAME.registerComponent('infopresent', {
       } else {
         console.log("laurlfilm no trobada");
       }
+
+      if (dataActual.liniescomposicio){
+        laurlliniescomposicio = dataActual.liniescomposicio;
+        if (laurlliniescomposicio > ""){
+          var lafinestra = document.getElementById('finestra');
+          var DOM_img = document.createElement("img");
+          DOM_img.src = laurlliniescomposicio;
+          DOM_img.style.width = "100%";
+          DOM_img.style.height = "auto";
+
+          lafinestra.appendChild(DOM_img);
+          lafinestra.style.visibility = "visible";
+        }
+        console.log(laurlliniescomposicio);
+      } else {
+        console.log("laurlliniescomposicio no trobada");
+      }
     });
 
     marcador.addEventListener('markerLost', () => {
-      if (dataActual.urlinfo){
+      if (dataActual.urlinfo || dataActual.film){
         laurlinfo = "index.html";
         document.getElementById('botoinfo').style.visibility = "hidden";
         document.getElementById('botofotos').style.visibility = "hidden";
         console.log('Amagats botons');
+      }
+
+      if (dataActual.liniescomposicio){
+        var lafinestra = document.getElementById("finestra");   // Get the <ul> element with id="myList"
+        lafinestra.removeChild(list.childNodes[0]);
+        lafinestra.style.visibility = "hidden";
       }
     });
   }
@@ -110,6 +135,12 @@ AFRAME.registerComponent('infopresent', {
     font-size: 0.8em;
   }
 
+  #finestra {
+    width: 90%;
+    margin-top: 10%;
+    z-index: 9998;
+    visibility: hidden;
+  }
 </style>
 <body style="margin : 0px; overflow: hidden;">
   <div class="buttons">
@@ -117,6 +148,7 @@ AFRAME.registerComponent('infopresent', {
     <span><img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo" style="visibility: hidden;" class="botoimg"></span>
     <span><img src="https://pintanescu.github.io/multimedia/imatges/mesfotos.png" id="botofotos" style="visibility: hidden;" class="botoimg"></span>
   </div>
+  <div id="finestra"></div>
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
@@ -141,8 +173,9 @@ AFRAME.registerComponent('infopresent', {
        smoothThreshold="5"
        cursor="fuse: false; rayOrigin: mouse"
        id="13673F00_nft"
-       infopresent
+       infopresent="liniescomposicio: multimedia/imatges/13673F00_linies.png"
      >
+<!--
          <a-entity
            geometry="primitive: plane; width: 210; height: 157.5"
            material="shader: flat; src: #linies; color: white"
@@ -152,6 +185,7 @@ AFRAME.registerComponent('infopresent', {
            id="13673F00_plane"
            >
          </a-entity>
+//-->
      </a-nft>
 
     <a-nft
