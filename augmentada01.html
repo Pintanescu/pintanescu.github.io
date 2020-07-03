@@ -58,11 +58,11 @@ AFRAME.registerComponent('infopresent', {
           var lafinestra = document.getElementById('finestra');
           var DOM_img = document.createElement("img");
           DOM_img.src = laurlliniescomposicio;
-          DOM_img.style.width = "100%";
-          DOM_img.style.height = "auto";
 
           lafinestra.appendChild(DOM_img);
-          lafinestra.style.visibility = "visible";
+          DOM_img.style.width = "100%";
+          DOM_img.style.height = "auto";
+        lafinestra.style.visibility = "visible";
         }
         console.log(laurlliniescomposicio);
       } else {
@@ -79,7 +79,7 @@ AFRAME.registerComponent('infopresent', {
       }
 
       if (dataActual.liniescomposicio){
-        var lafinestra = document.getElementById("finestra");   // Get the <ul> element with id="myList"
+        var lafinestra = document.getElementById("finestra");
         lafinestra.removeChild(list.childNodes[0]);
         lafinestra.style.visibility = "hidden";
       }
