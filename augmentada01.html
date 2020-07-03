@@ -80,7 +80,7 @@ AFRAME.registerComponent('infopresent', {
 
       var lafinestra = document.getElementById("finestra");
       if (lafinestra.style.visibility == "visible"){
-        lafinestra.removeChild(list.childNodes[0]);
+        lafinestra.removeChild(lafinestra.childNodes[0]);
         lafinestra.style.visibility = "hidden";
       }
     });
