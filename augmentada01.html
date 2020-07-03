@@ -131,6 +131,29 @@ AFRAME.registerComponent('infopresent', {
   <a-assets>
    <img id="linies" src="https://pintanescu.github.io/multimedia/imatges/13673F00_linies.png">
  </a-assets>
+
+     <a-nft
+       type="nft"
+       url="https://pintanescu.github.io/multimedia/nft/13673F00"
+       smooth="true"
+       smoothCount="10"
+       smoothTolerance=".01"
+       smoothThreshold="5"
+       cursor="fuse: false; rayOrigin: mouse"
+       id="13673F00_nft"
+       infopresent
+     >
+         <a-entity
+           geometry="primitive: plane; width: 210; height: 157.5"
+           material="shader: flat; src: #linies; color: white"
+           position="50 0 0"
+           rotation="-90 -90 90"
+           scale="0.55 0.55 0.55"
+           id="13673F00_plane"
+           >
+         </a-entity>
+     </a-nft>
+
     <a-nft
       type="nft"
       url="https://pintanescu.github.io/multimedia/nft/19827F05_petita"
@@ -186,27 +209,6 @@ AFRAME.registerComponent('infopresent', {
         </a-entity>
     </a-nft>
 
-    <a-nft
-      type="nft"
-      url="https://pintanescu.github.io/multimedia/nft/13673F00"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-      cursor="fuse: false; rayOrigin: mouse"
-      id="13673F00_nft"
-      infopresent
-    >
-        <a-entity
-          geometry="primitive: plane; width: 210; height: 157.5"
-          material="shader: flat; src: #linies; color: white"
-          position="50 0 0"
-          rotation="-90 -90 90"
-          scale="0.6 0.6 0.6"
-          id="13673F00_plane"
-          >
-        </a-entity>
-    </a-nft>
 
 <!-- Desat per utiltizar en un altre Plane
         <a-entity
