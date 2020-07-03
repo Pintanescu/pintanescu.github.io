@@ -140,18 +140,19 @@ AFRAME.registerComponent('infopresent', {
     top: 10%;
     left: 10%;
     width: 80%;
+    height: auto;
     margin-top: 10%;
     z-index: 9998;
     visibility: hidden;
   }
 </style>
 <body style="margin : 0px; overflow: hidden;">
+  <div id="finestra"></div>
   <div class="buttons">
     <span><img src="https://pintanescu.github.io/multimedia/imatges/enrere.png" id="botoenrere" class="botoimg"></span>
     <span><img src="https://pintanescu.github.io/multimedia/imatges/info.png" id="botoinfo" style="visibility: hidden;" class="botoimg"></span>
     <span><img src="https://pintanescu.github.io/multimedia/imatges/mesfotos.png" id="botofotos" style="visibility: hidden;" class="botoimg"></span>
   </div>
-  <div id="finestra"></div>
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
