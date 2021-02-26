@@ -4,36 +4,45 @@ body {
   font-size: 2em;
   padding: 2em;
   font-family: sans-serif;
-}
-img {
-  vertical-align: bottom;
-  margin: 0.2rem;
-  height: 2.5rem;
-  width: 2.5rem;
-}
-.dot {
-  height: 3em;
-  width: 3em;
-  background-color: red;
-  border-radius: 50%;
+  color: white;
+  background-image: url("multimedia/imatges/fons_pantalla.jpg");
   text-align: center;
+}
+.boto {
+  border-style: solid;
+  border-color: white;
+  border-radius: 10%;
+  border-width: thin;
+  text-align: center;
+  padding: 1em;
+  margin: 0.5em;
   vertical-align: middle;
   display: inline-block;
 }
-.dot a{
+.boto a {
   color: #fff;
-  font-size: 2.6em;
   font-weight: bold;
   font-family: sans-serif;
   text-decoration: none;
 }
+#capcalera {
+  margin: 0;
+  padding: 0;
+}
+#capcalera img {
+  width: 100%;
+}
+#contingut {
+  padding: 2em;
+  margin-left: 2em;
+}
 </style>
 <meta charset="UTF-8">
 <body>
-<h1>Les claus de la foto fixa</h1>
-<p><a href="fotografs.html">Llista de foto fixes</a></p>
-<h2>Guia</h2>
-<span class="dot"><a href="html/14965f81_info.html">1</a></span>
-<span class="dot"><a href="augmentada01.html">2</a></span>
+  <div id="capcalera"><img src="multimedia/imatges/capcalera.jpg"/></div>
+  <div id="contingut">
+    <span class="boto"><a href="fotografs.html">Llista de foto fixes</a></span><br>
+    <span class="boto"><a href="fotografs.html">Mediaguia</a></span>
+  </div>
 </body>
 </html>
