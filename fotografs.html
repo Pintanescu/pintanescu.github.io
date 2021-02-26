@@ -2,7 +2,6 @@
 <style>
 body {
   font-size: 2em;
-  padding: 2em;
   font-family: sans-serif;
   color: white;
   background-image: url("multimedia/imatges/fons_pantalla.jpg");
@@ -14,15 +13,22 @@ ul {
 a {
   color: white;
 }
-img {
-  vertical-align: bottom;
-  margin: 0.2rem;
+#capcalera {
+  margin: 0;
+  padding: 0; 
+}
+#capcalera img {
   width: auto;
+}
+#contingut {
+  padding: 2em;
+  margin-left: 2em;
 }
 </style>
 <meta charset="UTF-8">
 <body>
-  <div><img src="multimedia/imatges/capcalera.jpg"/></div>
+<div id="capcalera"><img src="multimedia/imatges/capcalera.jpg"/></div>
+<div id="contingut">
 <h1>Foto fixes</h1>
   <ul>
     <li><a href="https://repositori.filmoteca.cat/handle/11091/3/discover?query=dc.fons%3Asabate+AND+dc.creator%3A%22Abadal%2C+alfonso%22&submit=&rpp=100&sort_by=dc.title_sort&order=asc">Alfonso Abadal</a></li>
@@ -53,5 +59,6 @@ img {
     <li><a href="https://repositori.filmoteca.cat/handle/11091/3/discover?query=dc.fons%3Asabate+AND+dc.creator%3A%22Torres%20Garriga%2C+Salvador%22&submit=&rpp=100&sort_by=dc.title_sort&order=asc">Salvador Torres Garriga</a></li>
     <li><a href="https://repositori.filmoteca.cat/handle/11091/3/discover?query=dc.fons%3Asabate+AND+dc.creator%3A%22Javier%2C+Valentin%22&submit=&rpp=100&sort_by=dc.title_sort&order=asc">Valentín Javier</a></li>
   </ul>
+</div>
 </body>
 </html>
