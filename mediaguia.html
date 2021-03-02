@@ -30,9 +30,21 @@ a {
   vertical-align: middle;
 }
 
-.capazumbao img {
+.capazumbao {
+  border: solid red 2px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.imgzumbao {
   width: 100%;
-  max-width: 1200px;
+  max-width: 800px;
+}
+
+.tipuspagina{
+  position: relative;
+  bottom: 90px;
+  lef: 485px;
 }
 </style>
 <meta charset="UTF-8">
@@ -40,13 +52,16 @@ a {
 <div id="capcalera"><img src="multimedia/imatges/capcalera.jpg"/></div>
 <div id="contingut">
 <div id="llegenda">
-  <img src="multimedia/imatges/info_zumbao.png" alt="Info"> Informació<br>
-  <img src="multimedia/imatges/augmentada_zumbao.png" alt="Realitat augmentada"> Realitat augmentada<br>
-  <img src="multimedia/imatges/notabreu_zumbao.png" alt="Info"> Nota breu<br>
+<p>
+  <img src="multimedia/imatges/info_zumbao.png" alt="Info"> Informació
+  <img src="multimedia/imatges/augmentada_zumbao.png" alt="Realitat augmentada"> Realitat augmentada
+  <img src="multimedia/imatges/notabreu_zumbao.png" alt="Info"> Nota breu
+</p>
 </div>
-<div class="capazumbao">
-<a href="html/14965f81_info.html"><img src="multimedia/imatges/thumbnails/14965F81.jpg" alt="Sirena negra"></a>
-</div>
+<span class="capazumbao">
+<a href="html/14965f81_info.html"><img src="multimedia/imatges/thumbnails/14965F81.jpg" alt="Sirena negra" class="imgzumbao"></a>
+<span class="tipuspagina"> <img src="multimedia/imatges/notabreu_zumbao.png" alt="Info"></span>
+</span>
 </div>
 </body>
 </html>
